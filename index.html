@@ -1,0 +1,866 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="TravelVista helps you discover beautiful destinations, plan trips and explore incredible places across India.">
+
+    <title>TravelVista | Discover Incredible India</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Custom cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="top">
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">
+                <span class="logo-icon">✦</span>
+                Travel<span>Vista</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#planner">Trip Planner</a>
+                <a href="#contact" class="nav-button">Contact Us ↗</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero section -->
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content container">
+
+                <span class="eyebrow hero-eyebrow">
+                    ✦ YOUR JOURNEY STARTS HERE
+                </span>
+
+                <h1>
+                    Discover India.<br>
+                    <span>Collect Memories.</span>
+                </h1>
+
+                <p>
+                    From peaceful mountains to golden beaches,
+                    discover extraordinary places and create
+                    memories that last a lifetime.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#destinations" class="btn btn-primary">
+                        Explore Destinations <span>↗</span>
+                    </a>
+
+                    <a href="#planner" class="btn btn-glass">
+                        Plan Your Trip
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>6+</strong>
+                        <span>Destinations</span>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <span>Adventure</span>
+                    </div>
+
+                    <div>
+                        <strong>∞</strong>
+                        <span>Memories</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="#destinations" class="scroll-indicator">
+                <span>SCROLL TO EXPLORE</span>
+                <span class="scroll-arrow">↓</span>
+            </a>
+
+        </section>
+
+        <!-- Introduction -->
+        <section class="intro section-padding">
+
+            <div class="container intro-grid">
+
+                <div class="intro-heading">
+                    <span class="eyebrow">TRAVEL DIFFERENTLY</span>
+
+                    <h2>
+                        The world is wide.<br>
+                        <span>Your story awaits.</span>
+                    </h2>
+                </div>
+
+                <div class="intro-text">
+                    <p>
+                        TravelVista is your starting point for
+                        exploring the incredible diversity of India.
+                        Discover new cultures, taste local food,
+                        admire natural beauty and plan your next
+                        unforgettable adventure.
+                    </p>
+
+                    <a href="#experiences" class="text-link">
+                        Discover the experience →
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Destinations -->
+        <section class="destinations section-padding" id="destinations">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">FIND YOUR NEXT ESCAPE</span>
+                        <h2>Explore <span>Destinations</span></h2>
+                        <p>Every destination has a story. Find yours.</p>
+                    </div>
+
+                    <span class="destination-count" id="destinationCount">
+                        6 places to explore
+                    </span>
+                </div>
+
+                <!-- Search -->
+                <div class="destination-tools">
+
+                    <div class="search-box">
+                        <span>⌕</span>
+
+                        <input
+                            type="search"
+                            id="destinationSearch"
+                            placeholder="Search destinations..."
+                            aria-label="Search destinations"
+                        >
+                    </div>
+
+                    <div class="filter-buttons" id="filterButtons">
+                        <button class="filter-btn active" data-filter="all">
+                            All Places
+                        </button>
+
+                        <button class="filter-btn" data-filter="nature">
+                            Nature
+                        </button>
+
+                        <button class="filter-btn" data-filter="beach">
+                            Beaches
+                        </button>
+
+                        <button class="filter-btn" data-filter="culture">
+                            Culture
+                        </button>
+
+                        <button class="filter-btn" data-filter="city">
+                            Cities
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Destination cards -->
+                <div class="destination-grid" id="destinationGrid">
+
+                    <article class="destination-card"
+                        data-category="culture"
+                        data-name="agra"
+                        data-search="agra taj mahal uttar pradesh history monument">
+
+                        <div class="card-image">
+                            <img src="images/agra.jpg"
+                                alt="The Taj Mahal in Agra"
+                                loading="lazy">
+
+                            <span class="card-tag">HERITAGE</span>
+
+                            <button class="favorite-btn"
+                                aria-label="Add Agra to favorites"
+                                aria-pressed="false"
+                                data-favorite="agra">♡</button>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="card-location">📍 Uttar Pradesh, India</div>
+
+                            <h3>Agra</h3>
+
+                            <p>Witness the timeless beauty of the Taj Mahal
+                                and explore India's rich Mughal heritage.</p>
+
+                            <div class="card-footer">
+                                <span>History & Culture</span>
+                                <button class="details-btn"
+                                    data-destination="agra"
+                                    aria-label="Explore Agra">↗</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="destination-card"
+                        data-category="beach"
+                        data-name="goa"
+                        data-search="goa beach ocean sunset nightlife vacation">
+
+                        <div class="card-image">
+                            <img src="images/goa.jpg"
+                                alt="Beautiful beaches of Goa"
+                                loading="lazy">
+
+                            <span class="card-tag">BEACH ESCAPE</span>
+
+                            <button class="favorite-btn"
+                                aria-label="Add Goa to favorites"
+                                aria-pressed="false"
+                                data-favorite="goa">♡</button>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="card-location">📍 Goa, India</div>
+
+                            <h3>Goa</h3>
+
+                            <p>Enjoy golden beaches, coastal sunsets,
+                                Portuguese heritage and relaxed vibes.</p>
+
+                            <div class="card-footer">
+                                <span>Beaches & Relaxation</span>
+                                <button class="details-btn"
+                                    data-destination="goa"
+                                    aria-label="Explore Goa">↗</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="destination-card"
+                        data-category="nature"
+                        data-name="kerala"
+                        data-search="kerala backwaters greenery houseboat nature">
+
+                        <div class="card-image">
+                            <img src="images/kerala.jpg"
+                                alt="Lush green Kerala backwaters"
+                                loading="lazy">
+
+                            <span class="card-tag">NATURE</span>
+
+                            <button class="favorite-btn"
+                                aria-label="Add Kerala to favorites"
+                                aria-pressed="false"
+                                data-favorite="kerala">♡</button>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="card-location">📍 Kerala, India</div>
+
+                            <h3>Kerala</h3>
+
+                            <p>Relax among peaceful backwaters, tropical
+                                greenery and beautiful landscapes.</p>
+
+                            <div class="card-footer">
+                                <span>Nature & Backwaters</span>
+                                <button class="details-btn"
+                                    data-destination="kerala"
+                                    aria-label="Explore Kerala">↗</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="destination-card"
+                        data-category="nature"
+                        data-name="manali"
+                        data-search="manali himachal mountains snow adventure trekking">
+
+                        <div class="card-image">
+                            <img src="images/manali.jpg"
+                                alt="Mountains around Manali"
+                                loading="lazy">
+
+                            <span class="card-tag">MOUNTAIN ESCAPE</span>
+
+                            <button class="favorite-btn"
+                                aria-label="Add Manali to favorites"
+                                aria-pressed="false"
+                                data-favorite="manali">♡</button>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="card-location">📍 Himachal Pradesh, India</div>
+
+                            <h3>Manali</h3>
+
+                            <p>Experience mountain scenery, fresh air,
+                                adventurous trails and peaceful valleys.</p>
+
+                            <div class="card-footer">
+                                <span>Mountains & Adventure</span>
+                                <button class="details-btn"
+                                    data-destination="manali"
+                                    aria-label="Explore Manali">↗</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="destination-card"
+                        data-category="culture"
+                        data-name="jaipur"
+                        data-search="jaipur rajasthan pink city palace forts culture">
+
+                        <div class="card-image">
+                            <img src="images/jaipur.jpg"
+                                alt="Traditional architecture in Jaipur"
+                                loading="lazy">
+
+                            <span class="card-tag">ROYAL HERITAGE</span>
+
+                            <button class="favorite-btn"
+                                aria-label="Add Jaipur to favorites"
+                                aria-pressed="false"
+                                data-favorite="jaipur">♡</button>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="card-location">📍 Rajasthan, India</div>
+
+                            <h3>Jaipur</h3>
+
+                            <p>Explore grand forts, royal palaces,
+                                colorful markets and Rajasthani culture.</p>
+
+                            <div class="card-footer">
+                                <span>Culture & Architecture</span>
+                                <button class="details-btn"
+                                    data-destination="jaipur"
+                                    aria-label="Explore Jaipur">↗</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="destination-card"
+                        data-category="city"
+                        data-name="mumbai"
+                        data-search="mumbai maharashtra city marine drive gateway urban">
+
+                        <div class="card-image">
+                            <img src="images/mumbai.jpg"
+                                alt="Mumbai city and coastline"
+                                loading="lazy">
+
+                            <span class="card-tag">CITY LIFE</span>
+
+                            <button class="favorite-btn"
+                                aria-label="Add Mumbai to favorites"
+                                aria-pressed="false"
+                                data-favorite="mumbai">♡</button>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="card-location">📍 Maharashtra, India</div>
+
+                            <h3>Mumbai</h3>
+
+                            <p>Discover the Gateway of India, Marine Drive,
+                                street food and vibrant city life.</p>
+
+                            <div class="card-footer">
+                                <span>City & Food</span>
+                                <button class="details-btn"
+                                    data-destination="mumbai"
+                                    aria-label="Explore Mumbai">↗</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="empty-message" id="emptyMessage" hidden>
+                    No destinations found. Try another search!
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Experiences -->
+        <section class="experiences section-padding" id="experiences">
+
+            <div class="container">
+
+                <div class="section-heading centered-heading">
+                    <div>
+                        <span class="eyebrow">MAKE IT MEMORABLE</span>
+                        <h2>Travel is more than <span>the destination</span></h2>
+                        <p>Discover experiences that make every journey special.</p>
+                    </div>
+                </div>
+
+                <div class="experience-grid">
+
+                    <article class="experience-card">
+                        <div class="experience-icon">🏔️</div>
+                        <h3>Nature Escapes</h3>
+                        <p>Reconnect with mountains, forests, lakes and
+                            the beauty of the outdoors.</p>
+                    </article>
+
+                    <article class="experience-card">
+                        <div class="experience-icon">🏛️</div>
+                        <h3>Culture & Heritage</h3>
+                        <p>Explore historic landmarks, traditional art,
+                            local customs and architecture.</p>
+                    </article>
+
+                    <article class="experience-card">
+                        <div class="experience-icon">🍲</div>
+                        <h3>Local Flavours</h3>
+                        <p>Discover regional cuisines and experience
+                            the food traditions of India.</p>
+                    </article>
+
+                    <article class="experience-card">
+                        <div class="experience-icon">🎒</div>
+                        <h3>Adventure Time</h3>
+                        <p>Make your trip memorable with outdoor
+                            activities and new experiences.</p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Travel tips -->
+        <section class="travel-tips section-padding">
+
+            <div class="container tips-layout">
+
+                <div class="tips-intro">
+                    <span class="eyebrow">TRAVEL SMARTER</span>
+                    <h2>A little planning.<br><span>A lot more exploring.</span></h2>
+                    <p>Simple reminders to help make your next
+                        adventure easier and more enjoyable.</p>
+                </div>
+
+                <div class="tip-box">
+                    <span class="tip-number" id="tipNumber">TIP 01</span>
+
+                    <div class="tip-symbol">✦</div>
+
+                    <h3 id="tipTitle">Pack Light</h3>
+
+                    <p id="tipText">
+                        Carry the essentials, check the weather and
+                        leave a little space for souvenirs.
+                    </p>
+
+                    <button class="btn btn-primary" id="nextTip">
+                        Next Travel Tip →
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Interactive travel quiz -->
+        <section class="quiz-section section-padding" id="quiz">
+
+            <div class="container quiz-container">
+
+                <div class="section-heading centered-heading">
+                    <div>
+                        <span class="eyebrow">A LITTLE TRAVEL FUN</span>
+                        <h2>What's your <span>travel style?</span></h2>
+                        <p>Choose the experience you love most.</p>
+                    </div>
+                </div>
+
+                <div class="quiz-box">
+
+                    <div class="quiz-options" id="quizOptions">
+
+                        <button class="quiz-option" data-style="nature">
+                            <span>🏔️</span>
+                            <strong>Mountain Explorer</strong>
+                            <small>Fresh air and beautiful views</small>
+                        </button>
+
+                        <button class="quiz-option" data-style="beach">
+                            <span>🏖️</span>
+                            <strong>Beach Lover</strong>
+                            <small>Sunshine and peaceful shores</small>
+                        </button>
+
+                        <button class="quiz-option" data-style="culture">
+                            <span>🏛️</span>
+                            <strong>Culture Seeker</strong>
+                            <small>History and local traditions</small>
+                        </button>
+
+                        <button class="quiz-option" data-style="city">
+                            <span>🌆</span>
+                            <strong>City Explorer</strong>
+                            <small>Food, streets and city life</small>
+                        </button>
+
+                    </div>
+
+                    <div class="quiz-result" id="quizResult" aria-live="polite">
+                        Select an option to discover your travel style!
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Trip planner -->
+        <section class="planner-section section-padding" id="planner">
+
+            <div class="container planner-layout">
+
+                <div class="planner-intro">
+                    <span class="eyebrow">YOUR NEXT ADVENTURE</span>
+
+                    <h2>Let's plan a trip <span>you'll remember.</span></h2>
+
+                    <p>
+                        Choose your destination, travel style and
+                        number of days to create a simple starting
+                        plan for your journey.
+                    </p>
+
+                    <div class="planner-benefit">
+                        <span>✓</span> A plan tailored to your choices
+                    </div>
+
+                    <div class="planner-benefit">
+                        <span>✓</span> Helpful packing reminders
+                    </div>
+
+                    <div class="planner-benefit">
+                        <span>✓</span> Your plan generated instantly
+                    </div>
+                </div>
+
+                <form class="planner-form" id="tripForm">
+
+                    <h3>Build Your Trip</h3>
+                    <p class="form-subtitle">Tell us what your adventure looks like.</p>
+
+                    <label for="tripDestination">Destination</label>
+                    <select id="tripDestination" name="destination" required>
+                        <option value="">Choose a destination</option>
+                        <option value="agra">Agra</option>
+                        <option value="goa">Goa</option>
+                        <option value="kerala">Kerala</option>
+                        <option value="manali">Manali</option>
+                        <option value="jaipur">Jaipur</option>
+                        <option value="mumbai">Mumbai</option>
+                    </select>
+
+                    <label for="tripDays">Duration</label>
+                    <select id="tripDays" name="days" required>
+                        <option value="2">2 days</option>
+                        <option value="3" selected>3 days</option>
+                        <option value="5">5 days</option>
+                        <option value="7">7 days</option>
+                    </select>
+
+                    <label for="tripStyle">Travel style</label>
+                    <select id="tripStyle" name="style" required>
+                        <option value="relaxed">Relaxed</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="culture">Culture & Heritage</option>
+                        <option value="food">Food & Local Life</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-primary planner-submit">
+                        Create My Trip Plan ↗
+                    </button>
+
+                    <div class="planner-result" id="plannerResult"
+                        aria-live="polite" hidden></div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- Packing checklist -->
+        <section class="packing-section section-padding">
+
+            <div class="container packing-layout">
+
+                <div class="packing-intro">
+                    <span class="eyebrow">BEFORE YOU GO</span>
+                    <h2>Your travel <span>checklist.</span></h2>
+                    <p>Tick off each item as you prepare for your journey.</p>
+
+                    <div class="packing-progress">
+                        <div class="progress-label">
+                            <span>Preparation progress</span>
+                            <strong id="packingCount">0 / 6</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" id="packingProgress"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="packing-list" id="packingList">
+
+                    <label class="packing-item">
+                        <input type="checkbox" value="documents">
+                        <span class="custom-check"></span>
+                        <span>Identity documents and tickets</span>
+                    </label>
+
+                    <label class="packing-item">
+                        <input type="checkbox" value="clothes">
+                        <span class="custom-check"></span>
+                        <span>Suitable clothes and footwear</span>
+                    </label>
+
+                    <label class="packing-item">
+                        <input type="checkbox" value="charger">
+                        <span class="custom-check"></span>
+                        <span>Phone and charger</span>
+                    </label>
+
+                    <label class="packing-item">
+                        <input type="checkbox" value="medicine">
+                        <span class="custom-check"></span>
+                        <span>Personal essentials and medicines</span>
+                    </label>
+
+                    <label class="packing-item">
+                        <input type="checkbox" value="water">
+                        <span class="custom-check"></span>
+                        <span>Water bottle and reusable bag</span>
+                    </label>
+
+                    <label class="packing-item">
+                        <input type="checkbox" value="booking">
+                        <span class="custom-check"></span>
+                        <span>Accommodation and travel bookings</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Call to action -->
+        <section class="cta-section">
+
+            <div class="container cta-content">
+
+                <span class="eyebrow">THE NEXT CHAPTER IS YOURS</span>
+
+                <h2>Some journeys change<br>the way you see the world.</h2>
+
+                <p>Start exploring. Your next favourite place is waiting.</p>
+
+                <a href="#destinations" class="btn btn-light">
+                    Find Your Destination ↗
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section section-padding" id="contact">
+
+            <div class="container contact-layout">
+
+                <div class="contact-intro">
+                    <span class="eyebrow">LET'S CONNECT</span>
+
+                    <h2>Have a travel idea?<br><span>Let's talk.</span></h2>
+
+                    <p>
+                        Have questions or suggestions for TravelVista?
+                        Send us a message using the form.
+                    </p>
+
+                    <div class="contact-detail">
+                        <span>✉</span>
+                        <div>
+                            <strong>Send us a message</strong>
+                            <p>Fill in the form and we'll help you get started.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+
+                    <div class="form-row">
+
+                        <div class="form-field">
+                            <label for="contactName">Your Name</label>
+                            <input type="text" id="contactName"
+                                name="name" placeholder="Enter your name"
+                                minlength="2" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail"
+                                name="email" placeholder="you@example.com"
+                                required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-field">
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" id="contactSubject"
+                            name="subject" placeholder="What's on your mind?"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="contactMessage">Your Message</label>
+                        <textarea id="contactMessage" name="message"
+                            rows="5" minlength="10"
+                            placeholder="Tell us about your travel idea..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Send Message ↗
+                    </button>
+
+                    <p class="form-message" id="contactFeedback"
+                        aria-live="polite"></p>
+
+                    <p class="form-note">
+                        Student project demo: this form validates your
+                        input but does not send data to a server.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Destination details dialog -->
+    <dialog class="destination-dialog" id="destinationDialog">
+
+        <button class="dialog-close" id="dialogClose"
+            aria-label="Close destination details">×</button>
+
+        <div class="dialog-image" id="dialogImage"></div>
+
+        <div class="dialog-content">
+            <span class="eyebrow" id="dialogLocation">EXPLORE INDIA</span>
+
+            <h2 id="dialogTitle">Discover a destination</h2>
+
+            <p id="dialogDescription"></p>
+
+            <h3>Highlights</h3>
+            <ul id="dialogHighlights"></ul>
+
+            <a href="#" id="officialTourismLink"
+                class="btn btn-primary" target="_blank"
+                rel="noopener noreferrer">
+                Explore Official Tourism Information ↗
+            </a>
+        </div>
+
+    </dialog>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-main">
+
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-icon">✦</span>
+                    Travel<span>Vista</span>
+                </a>
+
+                <p>
+                    Discover incredible places, explore local culture
+                    and make every journey count.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="#destinations">Destinations</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#planner">Trip Planner</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Discover More</h3>
+                <a href="#quiz">Travel Quiz</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#top">Back to Top ↑</a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© <span id="currentYear"></span> TravelVista. Made with ♥ for travel lovers.</p>
+            <a href="#top">Back to the top ↑</a>
+        </div>
+
+    </footer>
+
+    <!-- Back-to-top button -->
+    <button class="back-to-top" id="backToTop"
+        aria-label="Back to top">↑</button>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
+
